@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <HK_Blade.label>거환도</HK_Blade.label>
+  <HK_Blade.description>강력하고 빠르게 공격하는 근접무기입니다.</HK_Blade.description>
+  <HK_Blade.tools.0.label>찌르기</HK_Blade.tools.0.label>
+  <HK_Blade.tools.1.label>베기</HK_Blade.tools.1.label>
+
+
+  <!-- bullet: fire bomber -->
+
+  <HK_Bullet.label>신기전</HK_Bullet.label>
+
+
+  <!-- gun: fire bomber -->
+
+  <HK_Minigun.label>신기전</HK_Minigun.label>
+  <HK_Minigun.description>다연발 원거리 무기입니다.</HK_Minigun.description>
+
+  <HK_Pierce.label>관통탄</HK_Pierce.label>
+
+  <HK_Sniper.label>천자총통</HK_Sniper.label>
+  <HK_Sniper.description>치명적인 데미지를 입히는 원거리 무기입니다.</HK_Sniper.description>
+
+  <HK_Arrow.label>애깃살</HK_Arrow.label>
+
+<HK_Bow.label>조선궁</HK_Bow.label>
+<HK_Bow.description>애깃살을 날리는 강력한 원거리 무기입니다.</HK_Bow.description>
+
+</LanguageData>

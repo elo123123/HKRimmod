@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--  -->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>HK_Blade</defName>
+    <label>HK Blade</label>
+    <description>ASDF</description>
+    <graphicData>
+      <texPath>Things/Weapons/HK-SWORD</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <!-- <techLevel>Industrial</techLevel> -->
+    <costStuffCount>50</costStuffCount>
+    <statBases>
+      <WorkToMake>150</WorkToMake>
+      <Mass>0.25</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <equippedStatOffsets>
+      <WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+      <MoveSpeed>0.15</MoveSpeed>
+    </equippedStatOffsets>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <tools>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>30</power>
+        <cooldownTime>0.5</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>0.2</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags>
+     <li>SpacerGun</li>
+    </weaponTags>
+    <recipeMaker>
+      <researchPrerequisite>Smithing</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>18</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+  <!-- bullet: fire bomber -->
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>HK_Bullet</defName>
+    <label>Thousand slug</label>
+    <graphicData>
+      <texPath>Things/Bullets/Shell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>1.5</explosionRadius>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>16</damageAmountBase>
+      <speed>90</speed>
+      <stoppingPower>1.5</stoppingPower>
+    </projectile>
+  </ThingDef>
+
+  <!-- gun: fire bomber -->
+  <ThingDef ParentName="BaseJIGun">
+    <defName>HK_Minigun</defName>
+    <label>Thousand Hand</label>
+    <description>ASDF</description>
+    <graphicData>
+      <texPath>Things/Weapons/MRS-M</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <Mass>0.5</Mass>
+      <WorkToMake>100</WorkToMake>
+      <AccuracyTouch>0.5</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>1.0</AccuracyMedium>
+      <AccuracyLong>0.6</AccuracyLong>
+      <RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+     <li>SpacerGun</li>
+    </weaponTags>
+    <equippedStatOffsets>
+      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+      <MoveSpeed>-0.5</MoveSpeed>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>30</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <!-- <techLevel>Industrial</techLevel> -->
+    <recipeMaker>
+      <researchPrerequisite>MultibarrelWeapons</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>20</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>HK_Bullet</defaultProjectile>
+        <warmupTime>2.3</warmupTime>
+        <range>45</range>
+        <burstShotCount>16</burstShotCount>
+        <soundCast>Shot_Minigun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <!--  -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>HK_Pierce</defName>
+    <label>Pierce slug</label>
+    <graphicData>
+      <texPath>Things/Projectile/Shard</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>60</damageAmountBase>
+      <speed>75</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--  -->
+  <ThingDef ParentName="BaseJIGun">
+    <defName>HK_Sniper</defName>
+    <label>HK Gun</label>
+    <description>ASDF</description>
+    <graphicData>
+      <texPath>Things/Weapons/MRS-K</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <weaponTags>
+     <li>SpacerGun</li>
+    </weaponTags>
+    <statBases>
+      <Mass>0.5</Mass>
+      <WorkToMake>100</WorkToMake>
+      <AccuracyTouch>0.6</AccuracyTouch>
+      <AccuracyShort>0.9</AccuracyShort>
+      <AccuracyMedium>0.9</AccuracyMedium>
+      <AccuracyLong>1.0</AccuracyLong>
+      <RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
+    </statBases>
+    <equippedStatOffsets>      
+      <HuntingStealth>1.0</HuntingStealth>
+      <MoveSpeed>-0.3</MoveSpeed>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>30</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <!-- <techLevel>Industrial</techLevel> -->
+    <recipeMaker>
+      <researchPrerequisite>MultibarrelWeapons</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>20</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>HK_Pierce</defaultProjectile>
+        <warmupTime>0.75</warmupTime>
+        <range>60</range>
+        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>3</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>HK_Arrow</defName>
+    <label>baby arrow</label>
+    <graphicData>
+      <texPath>Things/Projectile/Arrow_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>true</flyOverhead>
+      <damageDef>Arrow</damageDef>
+      <damageAmountBase>35</damageAmountBase>
+      <stoppingPower>1.2</stoppingPower>
+      <armorPenetrationBase>0.9</armorPenetrationBase>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <!-- <techLevel>Industrial</techLevel> -->
+    <defName>HK_Bow</defName>
+    <label>composite bow</label>
+    <description>ASDF</description>
+    <graphicData>
+      <texPath>Things/Weapons/HK-BOW</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Bow_Large</soundInteract>
+    <equippedStatOffsets>      
+      <HuntingStealth>2.0</HuntingStealth>
+      <MoveSpeed>0.3</MoveSpeed>
+    </equippedStatOffsets>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>35</costStuffCount>
+    <generateCommonality>0.05</generateCommonality>
+    <statBases>
+      <WorkToMake>220</WorkToMake>
+      <Mass>0.3</Mass>
+      <AccuracyTouch>0.7</AccuracyTouch>
+      <AccuracyShort>0.95</AccuracyShort>
+      <AccuracyMedium>1.0</AccuracyMedium>
+      <AccuracyLong>0.9</AccuracyLong>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>HK_Arrow</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>40</range>
+        <!-- <soundCast>Bow_Large</soundCast> -->
+      </li>
+    </verbs>
+    <recipeMaker>            
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <tools>
+      <li>
+        <capacities>
+          <li>Blunt</li>          
+        </capacities>
+        <power>15</power>
+        <cooldownTime>0.3</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>
